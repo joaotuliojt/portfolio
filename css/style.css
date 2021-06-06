@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     padding: 0;
     margin: 0;
@@ -6,7 +7,6 @@
 body{
     background: #000;
     text-align: center;
-    padding-bottom: 40px;
 }
 body, ul{
     text-decoration: none;
@@ -123,10 +123,12 @@ a{
     letter-spacing: 1px;
 }
 .redes-sociais{
+    margin: 0;
     margin-top: 20px;
     display: flex;
     align-items: center;
     gap: 10px;
+    padding: 0;
 }
 .redes-sociais img{
     width: 20px;
@@ -138,36 +140,118 @@ a{
     width: 40px;
 }
 #foto{
-    width: 300px;
+    width: 100%;
+    display: block;
 }
 
 
 .titulo{
     font-size: 2em;
-    margin-top: 20px;
+    margin-top: 60px;
     margin-bottom: 20px;
 }
 
-
-
-#contato{
+#servicos{
     width: 80%;
-    height: 500px;
-    background: #111111;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 80px;
-    display: flex;
-    justify-content: center;
+    margin-top: 40px;
 }
-.container-contato{
-    width: 80%;
+.container-cards{
     margin-left: auto;
     margin-right: auto;
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:20px;
 }
 
-@media (max-width: 600px){
+.column{
+    border: 1px solid #151515;
+    text-align: left;
+    padding: 20px;
+    
+}
+.column h3{
+    color:#007BFF;
+}
+.column p{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+  
+  
+
+#contato{
+    width: 80%;
+    padding-bottom: 40px;
+    background: #111111;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+#contato h2{
+    margin-top: 40px;
+    margin-bottom: 80px;
+    color: #007BFF;
+    font-weight: bold;
+}
+.container-contato{
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+}
+.contato a{
+    color:white;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1.2px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form textarea{
+    background: transparent;
+    width:400px;
+    padding: 10px;
+    height: 100px;
+    max-width: 400px;
+    color:white;
+    border: 1px solid white;
+}
+.form input{
+    padding: 10px;
+    width: 300px;
+    border-radius: 4px;
+    background: transparent;
+    border: 1px solid white;
+    color:white;
+    
+}
+#submit{
+    border: none;
+    width: 100px;
+    background: #007BFF;
+    transition: .5s;
+}
+#submit:hover{
+    background: #023b77;
+}
+footer{
+    margin-top:40px;
+    background: #151515;
+    padding: 5px;
+    font-family: 'Raleway', sans-serif;
+}
+footer span{
+    font-weight: bold;
+}
+.redes-sociais#media-footer{
+    justify-content: center;
+}
+@media (max-width: 700px){
 
     #btn-mobile{
         display: block;
@@ -179,7 +263,8 @@ a{
         top:70px;
         right: 0;
         height: 0;
-        background: #e7e7e7;
+        background: black;
+        margin: 0;
         z-index: 1000;
         transition: .6s;
         visibility: hidden;
@@ -193,7 +278,8 @@ a{
     #menu a{
         padding: 1rem 0;
         margin: 0 1rem;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid white;
+        border-top: 1px solid #FFF;
     }
     #btn-mobile{
         display: flex;
@@ -207,6 +293,7 @@ a{
     #hamburguer{
         border-top: 2px solid;
         width: 20px;
+        color: white;
     }
     #hamburguer::after, #hamburguer::before{
         content: '';
@@ -229,5 +316,46 @@ a{
         top: -7px;
        
     }
+    .conteudo-perfil{
+        grid-template-areas: "foto""conteudo";
+    }
 
+    .linha{
+       margin-left: auto;
+       margin-right: auto;
+       width: 50px;
+    }
+    .conteudo-e{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .conteudo-d{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .redes-sociais{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+
+    .container-contato{
+        text-align: center;
+        flex-direction: column;
+    }
+    #contato h2{
+        margin-bottom: 20px;
+    }
+    .form{
+        margin:10px 20px;
+        align-items: center;
+    }
+    .form input{
+        width: 80%;
+    }
+    .form textarea{
+        width: 80%;
+    }
 }
