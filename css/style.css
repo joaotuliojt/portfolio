@@ -25,6 +25,10 @@ a{
     font-weight: bold;
     margin-left: 20px;
     text-transform: uppercase;
+    transition: .5s;
+}
+#logo:hover{
+    color:#007BFF;
 }
 
 #header{
@@ -196,6 +200,7 @@ a{
     margin-bottom: 80px;
     color: #007BFF;
     font-weight: bold;
+    text-transform: uppercase;
 }
 .container-contato{
     display: flex;
@@ -234,6 +239,7 @@ a{
     border: none;
     width: 100px;
     background: #007BFF;
+    text-transform: uppercase;
     transition: .5s;
 }
 #submit:hover{
@@ -349,7 +355,7 @@ footer span{
         margin-bottom: 20px;
     }
     .form{
-        margin:10px 20px;
+        margin:40px 20px;
         align-items: center;
     }
     .form input{
