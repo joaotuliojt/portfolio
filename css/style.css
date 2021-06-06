@@ -32,14 +32,19 @@ a{
 }
 
 #header{
-
     box-sizing: border-box;
     height: 70px;
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent;
+    background: rgb(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+
 }
 #menu{
     display: flex;
@@ -225,10 +230,11 @@ a{
     max-width: 400px;
     color:white;
     border: 1px solid white;
+    overflow-y: auto;
 }
 .form input{
     padding: 10px;
-    width: 300px;
+    width: 400px;
     border-radius: 4px;
     background: transparent;
     border: 1px solid white;

@@ -214,11 +214,11 @@
                 <span><a href="mailto:joaotuliosoares@hotmail.com">joaotuliosoares@hotmail.com</a></span>
             </div>
             <div class="formulario">
-                <form class="form">
-                    <input type="text" placeholder="Nome">
-                    <input type="email" placeholder="Email">
-                    <textarea placeholder="Mensagem"></textarea>
-                    <input id="submit" type="submit">
+                <form class="form" id="my-form" action="https://formspree.io/f/xgerkjon" method="POST">
+                    <input type="email" placeholder="Email" name="email" >
+                    <textarea placeholder="Mensagem" name="message"></textarea>
+                    <input id="submit" type="submit" id="my-form-button">
+                    <p id="my-form-status"></p>
                 </form>
             </div>
         </div>
@@ -257,5 +257,27 @@
         <p>Site feito por mim mesmo</p>
     </footer>
     <script src="./js/menu.js"></script>
+    <script>
+        var form = document.getElementById("my-form");
+        
+        async function handleSubmit(event) {
+          event.preventDefault();
+          var status = document.getElementById("my-form-status");
+          var data = new FormData(event.target);
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+          }).then(response => {
+            status.innerHTML = "Thanks for your submission!";
+            form.reset()
+          }).catch(error => {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
 </body>
 </html>
