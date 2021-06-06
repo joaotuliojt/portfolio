@@ -147,41 +147,7 @@ a{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.flex-colum{
-    display: flex;
-    flex-direction: column;
-}
-.container-servicos{
-    width: 60%;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    gap: 20px;
-}
-.container-servicos#centralizado{
-    justify-content: center;
-    width: 250px;
-}
-.card-servico{
-    padding: 15px;
-    border: 1px solid #151515;
-    text-align: left;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-}
-.card-servico p{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-}
-.card-servico h3{
-    color:#007bff;
-    margin-top: 20px;
-    margin-bottom: 20px;
 
-}
 
 
 #contato{
@@ -191,6 +157,14 @@ a{
     margin-left: auto;
     margin-right: auto;
     margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+.container-contato{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
 }
 
 @media (max-width: 600px){
