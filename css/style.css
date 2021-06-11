@@ -239,7 +239,7 @@ a{
     transform: rotate(360deg);
     animation: move 1s infinite;
 }
-@keyframes move{
+button @keyframes move{
     0%,100%{
         transform: translateY(1px);
     }
@@ -281,7 +281,7 @@ a{
     animation: balance 2s infinite;
 }
 @keyframes balance { 
-	0%,50%,100%{
+    0%,50%,100%{
         transform: rotate(0deg);
     } 
     25%{
