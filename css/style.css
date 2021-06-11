@@ -133,13 +133,13 @@ a{
     background: #111111;
     display: flex;
     justify-content:center;
-    border: solid 2px;
+    border: solid 3px;
     border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
     transition: 0.5s;
 }
 .card-perfil:hover{
-    -webkit-box-shadow: 5px 5px 17px -3px #007BFF; 
-    box-shadow: 5px 5px 17px -3px #007BFF;
+    -webkit-box-shadow: 20px 20px 20px 29px #007BFF; 
+    box-shadow: 1px 5px 35px -9px #007BFF;
 }
 .conteudo-perfil{
     width: 80%;
@@ -233,11 +233,11 @@ a{
     overflow:hidden;
     position: relative;
 }
-.svgicon{
+
+.svgicon {
     width: 40px;
-    margin-bottom: 20px;
-    
 }
+
 .column.expand{
     overflow: hidden;
     transition: .5s;
@@ -248,7 +248,6 @@ a{
 .column.expand button{
     transform: rotate(360deg);
 }
-
 
 .column p{
     display: none;
