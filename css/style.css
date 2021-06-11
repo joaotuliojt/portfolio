@@ -94,19 +94,10 @@ a{
     background-size: cover;
     flex-direction: column;
     padding-bottom: 100px;
-    animation: animatedBackground 10s linear infinite alternate;
 }
 #sobre:target{
-    scroll-margin-top: -200px;
+    scroll-margin-top: 300px;
 }
-@keyframes animatedBackground {
-    from {
-      background-position-y: 0 0;
-    }
-    to {
-      background-position-y: 100% 100%;
-    }
-  }
 .texto-centro{
     text-align: center;
     margin-top: 100px;
@@ -237,7 +228,6 @@ a{
 .svgicon {
     width: 40px;
 }
-
 .column.expand{
     overflow: hidden;
     transition: .5s;
@@ -247,8 +237,16 @@ a{
 }
 .column.expand button{
     transform: rotate(360deg);
+    animation: move 1s infinite;
 }
-
+@keyframes move{
+    0%,100%{
+        transform: translateY(1px);
+    }
+    50%{
+        transform: translateY(-1px);
+    }
+}
 .column p{
     display: none;
     transition: 0.5;
@@ -270,6 +268,7 @@ a{
     bottom: 40px;
     transform: rotate(0deg);
     transition: 1s ease-in-out;
+    animation: move 1s infinite;
 }
 .column button:active{
     background: #02366e;
@@ -277,6 +276,20 @@ a{
 .column:hover{
     -webkit-box-shadow: 0px 0px 10px 2px #2ec4b6; 
     box-shadow: 0px 0px 10px 2px #2ec4b6;
+}
+.column:hover .svgicon{
+    animation: balance 2s infinite;
+}
+@keyframes balance { 
+	0%,50%,100%{
+        transform: rotate(0deg);
+    } 
+    25%{
+        transform: rotate(-35deg);
+    }
+    75%{
+        transform: rotate(35deg);
+    }
 }
 .column h3{
     color:#007BFF;
