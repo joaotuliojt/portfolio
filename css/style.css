@@ -3,10 +3,15 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
 }
 body{
     background: #000;
     text-align: center;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-margin-top: 50vh;
 }
 body, ul{
     text-decoration: none;
@@ -17,6 +22,17 @@ body, ul{
 a{
     text-decoration: none;
     color: black;
+}
+.arrow{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.arrow svg{
+    border-radius: 100%;
+    width: 40px;
 }
 /* Cabeçalho INICIO */
 #logo{
@@ -38,7 +54,8 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgb(0, 0, 0, 0.5);
+    z-index: 1000;
+    background: rgb(0, 0, 0, 0.6);
     backdrop-filter: blur(8px);
     position: fixed;
     top: 0;
@@ -189,20 +206,72 @@ a{
 .container-cards{
     margin-left: auto;
     margin-right: auto;
-    display: grid;
+    /*display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    */
+    display: flex;
+    justify-content: center;
     gap:20px;
 }
-
 .column{
+    width: 100%;
+    height: 180px;
     border: 1px solid #151515;
-    text-align: left;
-    padding: 20px;
+    text-align: center;
+    padding: 30px 10px;
     transition: 0.5s;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow:hidden;
+    position: relative;
+}
+.svgicon{
+    width: 40px;
+    margin-bottom: 20px;
+    
+}
+.column.expand{
+    overflow: hidden;
+    transition: .5s;
+    height: 26.25rem;
+    align-items: center;
+    text-align: center;
+}
+.column.expand button{
+    transform: rotate(360deg);
+}
+
+
+.column p{
+    display: none;
+    transition: 0.5;
+}
+.column p.show{
+    display: block;
+}
+.column button{
+    width: 100px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #1057A3;
+    color:white;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: absolute;
+    bottom: 40px;
+    transform: rotate(0deg);
+    transition: 1s ease-in-out;
+}
+.column button:active{
+    background: #02366e;
 }
 .column:hover{
     -webkit-box-shadow: 0px 0px 10px 2px #2ec4b6; 
-box-shadow: 0px 0px 10px 2px #2ec4b6;
+    box-shadow: 0px 0px 10px 2px #2ec4b6;
 }
 .column h3{
     color:#007BFF;
@@ -211,6 +280,7 @@ box-shadow: 0px 0px 10px 2px #2ec4b6;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
 }
+
   
   
 
@@ -377,9 +447,18 @@ footer span{
         margin-top: 50px;
     }
 
+    .container-cards{
+        flex-direction: column;
+        
+    }
+    .column.expand{
+        height: 23.75rem;
+    }
+
     .container-contato{
         text-align: center;
         flex-direction: column;
+        
     }
     #contato h2{
         margin-bottom: 20px;
@@ -394,4 +473,5 @@ footer span{
     .form textarea{
         width: 80%;
     }
+
 }
