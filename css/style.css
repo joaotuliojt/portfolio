@@ -11,7 +11,10 @@ body{
 }
 html{
     scroll-behavior: smooth;
-    scroll-margin-top: 50vh;
+    
+}
+:target{
+    scroll-margin-top: 15rem;
 }
 body, ul{
     text-decoration: none;
@@ -92,6 +95,9 @@ a{
     flex-direction: column;
     padding-bottom: 100px;
     animation: animatedBackground 10s linear infinite alternate;
+}
+#sobre:target{
+    scroll-margin-top: -200px;
 }
 @keyframes animatedBackground {
     from {
