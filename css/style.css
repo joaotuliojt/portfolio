@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+HEAD
 *{
     padding: 0;
     margin: 0;
@@ -101,6 +101,7 @@ a{
 .texto-centro{
     text-align: center;
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 .texto-centro span:first-child{
     font-size: 0.9em;
@@ -120,17 +121,13 @@ a{
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
     background: #111111;
     display: flex;
     justify-content:center;
+    transition: 0.5s;
+    position: relative;
     border: solid 3px;
     border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
-    transition: 0.5s;
-}
-.card-perfil:hover{
-    -webkit-box-shadow: 20px 20px 20px 29px #007BFF; 
-    box-shadow: 1px 5px 35px -9px #007BFF;
 }
 .conteudo-perfil{
     width: 80%;
@@ -196,22 +193,21 @@ a{
 
 #servicos{
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     margin-top: 40px;
 }
 .container-cards{
-    margin-left: auto;
-    margin-right: auto;
     /*display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     */
     display: flex;
     justify-content: center;
+    align-items: baseline;
+    flex-wrap:wrap;
     gap:20px;
 }
 .column{
-    width: 100%;
+    width: 12.5rem;
     height: 180px;
     border: 1px solid #151515;
     text-align: center;
@@ -238,14 +234,6 @@ a{
 .column.expand button{
     transform: rotate(360deg);
     animation: move 1s infinite;
-}
-button @keyframes move{
-    0%,100%{
-        transform: translateY(1px);
-    }
-    50%{
-        transform: translateY(-1px);
-    }
 }
 .column p{
     display: none;
@@ -274,8 +262,8 @@ button @keyframes move{
     background: #02366e;
 }
 .column:hover{
-    -webkit-box-shadow: 0px 0px 10px 2px #2ec4b6; 
-    box-shadow: 0px 0px 10px 2px #2ec4b6;
+    -webkit-box-shadow: 0px 0px 5px 1px #2ec4b6; 
+    box-shadow: 0px 0px 5px 1px #2ec4b6;
 }
 .column:hover .svgicon{
     animation: balance 2s infinite;
@@ -303,12 +291,11 @@ button @keyframes move{
   
 
 #contato{
-    width: 80%;
-    padding-bottom: 40px;
+    width: 100%;
+    padding-bottom: 2.5rem;
     background: #111111;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
+    margin: 0 auto;
+    margin-top: 6.25rem;
     display: flex;
     flex-direction: column;
 }
@@ -321,23 +308,27 @@ button @keyframes move{
 }
 .container-contato{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: left;
 }
 .contato a{
     color:white;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Arimo', sans-serif;
     letter-spacing: 1.2px;
+}
+.contato a:hover{
+    transition: 0.5s;
+    border-bottom: 1px solid white;
 }
 .form{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
 }
 .form textarea{
     background: transparent;
-    width:400px;
-    padding: 10px;
+    width:25rem;
+    padding: 0.625rem;
     height: 100px;
     max-width: 400px;
     color:white;
@@ -345,8 +336,8 @@ button @keyframes move{
     overflow-y: auto;
 }
 .form input{
-    padding: 10px;
-    width: 400px;
+    padding: 0.625rem;
+    width: 25rem;
     border-radius: 4px;
     background: transparent;
     border: 1px solid white;
@@ -355,7 +346,7 @@ button @keyframes move{
 }
 #submit{
     border: none;
-    width: 100px;
+    width: 6.25rem;
     background: #007BFF;
     text-transform: uppercase;
     transition: .5s;
@@ -467,6 +458,7 @@ footer span{
 
     .container-cards{
         flex-direction: column;
+        align-items: center;
         
     }
     .column.expand{
